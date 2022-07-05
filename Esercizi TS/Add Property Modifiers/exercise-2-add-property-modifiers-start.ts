@@ -32,7 +32,7 @@ const countryC: Country = {
 // This will cause a type error. Remove the code that now has a type error.
 
 type Currency = {
-    name: "Euro";
+    readonly name: string;
     code: string;
     symbol: string;
 };

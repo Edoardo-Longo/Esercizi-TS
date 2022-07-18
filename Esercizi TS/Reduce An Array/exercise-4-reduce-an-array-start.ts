@@ -19,9 +19,9 @@ const populations = [
 //
 // Hint: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
 
-const sumOfPopulations = populations.reduce((total, population) => {
+const sumOfPopulations = populations.reduce((total:number, population) => {
     return total + population;
-}, false);
+}, 0);
 
 console.log(sumOfPopulations);
 

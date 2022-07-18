@@ -2,62 +2,63 @@
  * START: Follow the instructions below.
  */
 
-class Currency {
-    private name: string;
-    private code: string;
-    private symbol: string;
+ class Currency {
+   name: string;
+   private code: string;
+   private symbol: string;
 
-    constructor(name: string, code: string, symbol: string) {
-        this.name = name;
-        this.code = code;
-        this.symbol = symbol;
-    }
+   constructor(name: string, code: string, symbol: string) {
+       this.name = name;
+       this.code = code;
+       this.symbol = symbol;
+   }
 
-    public describe(): void {
-        let description = `The ${this.name} currency `;
-        description += `has the code ${this.code} `;
-        description += `and uses the symbol ${this.symbol}.`;
+   public describe(): void {
+       let description = `The ${this.name} currency `;
+       description += `has the code ${this.code} `;
+       description += `and uses the symbol ${this.symbol}.`;
 
-        console.log(description);
-    }
+       console.log(description);
+   }
 }
 
 // Alter this class to extend the `Currency` class.
 
-class DetailedCurrency {
+class DetailedCurrency extends Currency {
 
-    // Define a private field named `banknotes`.
-    // Set the field type so it can be used to store an array of numbers.
-
-
-
-    // Add a `banknotes` parameter with the same type as the `banknotes` field.
-
-    constructor(name: string, code: string, symbol: string) {
-        // Fix this call to the parent constructor.
-
-        super(name, code);
-
-        // Store the value of the `banknotes` parameter in the corresponding field.
+   private banknotes:number[]
+   // Define a private field named `banknotes`.
+   // Set the field type so it can be used to store an array of numbers.
 
 
-    }
 
-    // Change the visibility modifier on this method so it can be called
-    // by code outside of this class.
+   // Add a `banknotes` parameter with the same type as the `banknotes` field.
 
-    private describeBankNotes() {
-        // Change the visibility of the parent class `name` field so
-        // that its value can be read here in this child class method.
+   constructor(name: string, code: string, symbol: string, banknotes:number[])  {
+       // Fix this call to the parent constructor.
 
-        let description = `The ${this.name} currency uses the banknotes `;
+       super(name, code,symbol);
 
-        // Replace `null` with the value of the `banknotes` field.
+       // Store the value of the `banknotes` parameter in the corresponding field.
+       this.banknotes=banknotes;
 
-        description += null;
+   }
 
-        console.log(description);
-    }
+   // Change the visibility modifier on this method so it can be called
+   // by code outside of this class.
+
+   public describeBankNotes() {
+       // Change the visibility of the parent class `name` field so
+       // that its value can be read here in this child class method.
+
+       let description = `The ${this.name} currency uses the banknotes `;
+
+       // Replace `null` with the value of the `banknotes` field.
+
+       description += this.banknotes
+
+       console.log(description);
+   }
 
 }
 

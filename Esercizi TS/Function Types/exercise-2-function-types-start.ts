@@ -27,6 +27,7 @@ function languagesSpoken(country: string, language1: string, language2?: string)
     if(typeof language2 === 'string'){
         console.log(language2);
     }
+    return
 }
 
 languagesSpoken("Colombia", "Spanish", "English");

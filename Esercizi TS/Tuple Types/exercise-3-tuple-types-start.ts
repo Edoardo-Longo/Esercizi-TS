@@ -9,9 +9,9 @@ const countryPopulation:[string,number] = ["China", 1_412_600_000];
 // Change the `CountryWithPopulation` type into a tuple type.
 // This should fix the type error on Line 14.
 
-type CountryWithCurrency = [string,string,string];
+type CountryWithCurrency = [string,number,boolean];
 
-const countryCurrency: CountryWithCurrency = ["Italy", "Euro", "EUR"];
+const countryCurrency: CountryWithCurrency[] = [["Italy", 10, true],["Italy", 10, true],["Italy", 10, true]];
 
 // Add a tuple type annotation that prevents this tuple from being modified.
 // Use the readonly modifier and the tuple type syntax: readonly [type, type]

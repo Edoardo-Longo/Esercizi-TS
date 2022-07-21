@@ -10,7 +10,7 @@ let year: any = undefined;
 
 let averageTemperature: number = 23.6;
 
-let visited: boolean = true;
+let visited: true = true;
 
 let currency: any = null;
 

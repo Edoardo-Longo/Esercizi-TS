@@ -4,7 +4,7 @@
 
 // Fix this use of the `Record` utility type so it constructs a valid type.
 
-const currency: Record<> = {
+const currency: Record<string,string> = {
     name: "United States dollar",
     code: "USD",
     symbol: "$",
@@ -14,13 +14,13 @@ const currency: Record<> = {
 // the `Record` utility type.
 // Hint: Pass the `Currency` type as the second type argument to `Record<>`.
 
-interface Currency {
+interface Currency{
     name: string;
     code: string;
     symbol: string;
 }
 
-const currencies = {
+const currencies:Record<string,Currency> = {
     france: {
         name: "Euro",
         code: "EUR",
